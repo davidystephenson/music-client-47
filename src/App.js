@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Signup from './Signup'
+import Login from './Login'
+import Greeting from './Greeting'
+import Artists from './Artists'
 
 function App() {
+  console.log('app test')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Greeting />
+
+      <Login />
+      <Signup />
+      <Artists />
+    </main>
+  )
 }
 
 export default App;
