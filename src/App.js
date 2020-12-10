@@ -3,7 +3,7 @@ import Login from './Login'
 import Greeting from './Greeting'
 import Artists from './Artists'
 
-function App() {
+function App () {
   console.log('app test')
 
   return (
@@ -17,4 +17,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

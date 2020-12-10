@@ -16,7 +16,7 @@ export default function Artists () {
         .get('http://localhost:4000/artist', {
           headers: { Authorization: `Bearer ${jwt}` }
         })
- 
+
       console.log('artists.data test:', artists.data)
 
       const isArray = Array.isArray(artists.data)
@@ -30,18 +30,23 @@ export default function Artists () {
 
   useEffect(getArtists, [jwt])
 
-
   console.log('artists test:', artists)
 
   const items = artists
     .map(artist => <li key={artist.name}>{artist.name}</li>)
-   
+
+  const content = items.length
+    ? items
+    : jwt
+      ? 'Loading...'
+      : 'You are not logged in'
+
   return (
     <>
-      <h3>Artists</h3> 
+      <h3>Artists</h3>
 
       <ul>
-        {items}
+        {content}
       </ul>
     </>
   )
