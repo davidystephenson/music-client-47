@@ -13,9 +13,14 @@ export default function Artists () {
   async function getArtists () {
     try {
       const artists = await axios
-        .get('http://localhost:4000/artist', {
-          headers: { Authorization: `Bearer ${jwt}` }
-        })
+        .get(
+          'http://localhost:4000/artist', // url
+          { // options and/or configuration
+            headers: {
+              Authorization: `Bearer ${jwt}`
+            }
+          }
+        )
 
       console.log('artists.data test:', artists.data)
 

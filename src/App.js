@@ -1,7 +1,5 @@
-import Signup from './Signup'
-import Login from './Login'
 import Greeting from './Greeting'
-import Artists from './Artists'
+import Routes from './Routes'
 
 function App () {
   console.log('app test')
@@ -10,9 +8,7 @@ function App () {
     <main>
       <Greeting />
 
-      <Login />
-      <Signup />
-      <Artists />
+      <Routes />
     </main>
   )
 }
